@@ -2,7 +2,27 @@
 
 ## Step 1: Install gcc
 
-[[GCC Installation]]
+First, run Windows Powershell as Administrator
+
+```powershell
+Set-ExecutionPolicy Bypass -Scope Process
+# Then, type "A" and enter to accept Yes to All
+```
+
+Then run the below command to install Chocolatey
+
+```powershell
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+```
+
+Wait a few seconds for the command to complete
+$\rightarrow$ If you don't see any errors, you are ready to use Chocolatey!
+
+Then install gcc by this command
+
+```bash
+choco install mingw
+```
 
 ## Step 2: Determine the `g++` & `gdb` path
 
